@@ -9,6 +9,7 @@ import org.example.game_package.GameManager;
 
 public class DonjonsEtDragonsApp extends Application {
     public void start(Stage primaryStage) throws Exception{
+        primaryStage.setTitle("Donjons et Dragons");
         GameManager gameManager = new GameManager();
         Group root = new Group();
         Scene mainScene = new Scene(root, 300, 300, Color.BEIGE);
