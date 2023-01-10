@@ -1,8 +1,6 @@
 package org.example.game_package;
 
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import org.example.board_package.Board;
+import javafx.scene.Parent;
 import org.example.board_package.BoardManager;
 
 public class GameManager {
@@ -10,15 +8,14 @@ public class GameManager {
 
     public Game currentGame;
 
-    public void GameManager(Scene currentScene){
-        this.startGame(currentScene);
+    public void GameManager(){
+        this.startGame();
     }
-    public void startGame(Scene currentScene){
+    public void startGame(){
         BoardManager boardManager = new BoardManager();
         boardManager.generateBoard();
         this.setBoard(boardManager);
         this.setCurrentGame(new Game());
-
     }
     public BoardManager getBoard() {
         return board;
