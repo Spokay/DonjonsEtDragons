@@ -44,6 +44,14 @@
             <artifactId>javafx-graphics</artifactId>
             <version>19</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>19</version>
+        </dependency>
+
     </dependencies>
 
 
@@ -55,7 +63,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>org.donjonsetdragons.DonjonsEtDragonsApp</mainClass>
+                    <mainClass>org.donjonsetdragons.MainApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
