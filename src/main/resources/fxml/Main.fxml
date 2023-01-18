@@ -8,8 +8,8 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.donjonsetdragons.MainController"
+      fx:controller="org.donjonsetdragons.Controllers.MainController"
       prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Main.css">
-    <Button text="Start game" />
-    <Button text="Exit" fx:id="exitButton" id="exitButton" onAction="#closeWindow"/>
+    <Button text="Start game" id="startButton" fx:id="startButton" onAction="#startGame" styleClass="btn"/>
+    <Button text="Exit" fx:id="exitButton" id="exitButton" onAction="#closeWindow" styleClass="btn"/>
 </VBox>
