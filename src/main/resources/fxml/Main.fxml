@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.donjonsetdragons.Controllers.MainController"
-      prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Main.css">
-    <Button text="Start game" id="startButton" fx:id="startButton" onAction="#startGame" styleClass="btn"/>
-    <Button text="Exit" fx:id="exitButton" id="exitButton" onAction="#closeWindow" styleClass="btn"/>
+<VBox prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.donjonsetdragons.Controllers.MainController">
+    <Button id="startButton" fx:id="startButton" onAction="#startGame" styleClass="btn" text="Start game" />
+    <Button id="exitButton" fx:id="exitButton" onAction="#closeWindow" styleClass="btn" text="Exit" />
 </VBox>

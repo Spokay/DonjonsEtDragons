@@ -1,33 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.donjonsetdragons.Controllers.GameController"
-            prefHeight="400.0" prefWidth="600.0">
-    <VBox>
-        <!-- game board -->
-    </VBox>
-    <HBox>
-        <VBox>
-            <!-- Hero stats -->
-            <Label text="Hero stats"/>
-            <HBox>
-                <Label text="HP : "/>
-                <Label />
-            </HBox>
-            <HBox>
-                <Label text="ATK : "/>
-                <Label />
-            </HBox>
-        </VBox>
-        <VBox>
-            <!-- Case content -->
-        </VBox>
+<VBox prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/Game.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.donjonsetdragons.Controllers.GameController">
+   <AnchorPane prefHeight="550.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+      <children>
+         <Button layoutX="425.0" layoutY="496.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" text="Roll Dice">
+            <font>
+               <Font name="Inter Bold" size="20.0" />
+            </font>
+         </Button>
+      </children>
+   </AnchorPane>
+    <HBox prefHeight="250.0">
+      <SplitPane dividerPositions="0.5" prefHeight="160.0" HBox.hgrow="ALWAYS">
+        <items>
+          <AnchorPane minHeight="0.0" prefHeight="248.0" prefWidth="404.0">
+               <children>
+                     <!-- Hero stats -->
+                     <Label layoutX="247.0" prefHeight="60.0" prefWidth="125.0" text="Hero stats" textAlignment="CENTER" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="240.0">
+                     <font>
+                        <Font name="Inter Bold" size="20.0" />
+                     </font>
+                  </Label>
+                     <HBox alignment="CENTER">
+                         <Label />
+                     </HBox>
+                     <HBox alignment="CENTER">
+                         <Label />
+                     </HBox>
+                      <Label layoutX="279.0" layoutY="114.0" text="ATK : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                      <Label layoutX="283.0" layoutY="79.0" text="HP : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="577.0">
+               <children>
+                      <Label layoutX="231.0" prefHeight="60.0" text="Case Content" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="230.0">
+                         <font>
+                            <Font name="Inter Bold" size="20.0" />
+                         </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
     </HBox>
 </VBox>

@@ -1,4 +1,5 @@
 org\donjonsetdragons\Models\game_package\GameManager.class
+org\donjonsetdragons\Controllers\Controller.class
 org\donjonsetdragons\Models\character_package\enemy\Enemy.class
 org\donjonsetdragons\Models\board_package\case_package\EnemyCase.class
 org\donjonsetdragons\Models\character_package\hero\Hero.class

@@ -11,6 +11,7 @@ public class MainApp extends Application {
     public static Stage currentPrimaryStage;
     public void start(Stage primaryStage) throws Exception{
         currentPrimaryStage = primaryStage;
+        primaryStage.setFullScreen(true);
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
         primaryStage.setTitle("Donjons et Dragons");
         Scene mainScene = new Scene(root);

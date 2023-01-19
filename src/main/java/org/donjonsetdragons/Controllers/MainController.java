@@ -5,10 +5,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import org.donjonsetdragons.MainApp;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable {
+public class MainController extends Controller implements Initializable {
     @FXML
     private Button exitButton;
     @FXML
@@ -16,17 +17,17 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("hello world");
+        System.out.println("Main Scene");
     }
 
     @FXML
     protected void closeWindow(){
-        MainApp.currentPrimaryStage.close();
+        currentPrimaryStage.close();
     }
 
     @FXML
-    protected void startGame(){
-
+    protected void startGame() throws IOException {
+        GameController.startGame();
     }
 
     /* private class ButtonHandler implements EventHandler<ActionEvent>{
