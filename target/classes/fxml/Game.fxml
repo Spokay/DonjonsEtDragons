@@ -29,30 +29,44 @@
                         <Font name="Inter Bold" size="20.0" />
                      </font>
                   </Label>
-                  <FlowPane alignment="CENTER" layoutX="102.0" layoutY="69.0" minWidth="300.0" orientation="VERTICAL" prefHeight="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <FlowPane alignment="CENTER" layoutX="102.0" layoutY="69.0" minWidth="300.0" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <HBox alignment="CENTER">
+                        <HBox alignment="CENTER" minHeight="30.0">
                            <children>
-                              <Label text="ATK : ">
+                              <Label text="Name :">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                               <Label text="" fx:id="heroAttackPoints">
+                              <Label id="heroName" fx:id="heroName">
                                    <font>
                                        <Font size="15.0" />
                                    </font>
-                               </Label>
+                              </Label>
                            </children>
                         </HBox>
-                        <HBox>
+                        <HBox alignment="CENTER" minHeight="30.0">
                            <children>
                               <Label alignment="CENTER" text="HP : ">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                               <Label text="6" id="heroHpPoints" fx:id="heroHpPoints">
+                               <Label id="heroHpPoints" fx:id="heroHpPoints">
+                                   <font>
+                                       <Font size="15.0" />
+                                   </font>
+                               </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" minHeight="30.0">
+                           <children>
+                              <Label text="ATK : ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                               <Label fx:id="heroAttackPoints" text="">
                                    <font>
                                        <Font size="15.0" />
                                    </font>
@@ -70,9 +84,9 @@
                         <Font name="Inter Bold" size="20.0" />
                      </font>
                   </Label>
-                  <FlowPane alignment="CENTER" layoutX="102.0" layoutY="69.0" minWidth="300.0" orientation="VERTICAL" prefHeight="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <FlowPane alignment="CENTER" layoutX="102.0" layoutY="69.0" minWidth="300.0" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <HBox alignment="CENTER">
+                        <HBox alignment="CENTER" minHeight="30.0">
                            <children>
                               <Label text="ATK : ">
                                  <font>
@@ -81,7 +95,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER">
+                        <HBox alignment="CENTER" minHeight="30.0">
                            <children>
                               <Label alignment="CENTER" text="HP : ">
                                  <font>

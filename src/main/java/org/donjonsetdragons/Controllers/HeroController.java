@@ -30,7 +30,6 @@ public class HeroController extends Controller{
             int max = this.getCurrentHero().getAttackPoint()[1].get();
             String str = min + " ~ " + max;
             return str;
-
         }, heroAtkElement.textProperty());
         heroAtkElement.textProperty().bind(atkIntegerBinding);
     }

@@ -4,6 +4,6 @@
 <?import javafx.scene.layout.*?>
 
 <VBox prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.donjonsetdragons.Controllers.MainController">
-    <Button id="startButton" fx:id="startButton" onAction="#startGame" styleClass="btn" text="Start game" />
+    <Button id="startButton" fx:id="startButton" onAction="#chooseCharacter" styleClass="btn" text="Start game" />
     <Button id="exitButton" fx:id="exitButton" onAction="#closeWindow" styleClass="btn" text="Exit" />
 </VBox>
