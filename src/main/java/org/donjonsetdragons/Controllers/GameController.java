@@ -3,9 +3,9 @@ package org.donjonsetdragons.Controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-
 import java.net.URL;
 import java.util.ResourceBundle;
+import org.donjonsetdragons.Models.character_package.hero.HeroData;
 
 public class GameController extends Controller implements Initializable {
 
@@ -20,7 +20,8 @@ public class GameController extends Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            this.startGame();
+            HeroData data = (HeroData) currentPrimaryStage.getUserData();
+            this.startGame(data);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -28,10 +29,7 @@ public class GameController extends Controller implements Initializable {
     }
 
     @FXML
-    public void startGame() throws Exception {
-        String heroType = "org.donjonsetdragons.Models.character_package.hero"+"Magician";
-        String heroName = "michel";
-        System.out.println(this.heroHpPoints);
-        heroController = new HeroController(this.heroHpPoints, this.heroAttackPoints, new String[]{heroType, heroName});
+    public void startGame(HeroData data) throws Exception {
+        heroController = new HeroController(this.heroName, this.heroHpPoints, this.heroAttackPoints, new String[]{data.getHeroType(), data.getHeroName()});
     }
 }

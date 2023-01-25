@@ -15,8 +15,6 @@ public class MainController extends Controller implements Initializable {
     private Button exitButton;
     @FXML
     private Button startButton;
-    @FXML
-    private ChoiceBox heroChoiceBox;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -29,17 +27,10 @@ public class MainController extends Controller implements Initializable {
     }
 
     @FXML
-    protected void startGame() throws Exception {
-        Parent root = FXMLLoader.load(GameController.class.getResource("/fxml/Game.fxml"));
-        currentPrimaryStage.getScene().setRoot(root);
-    }
-    @FXML
     protected void chooseCharacter() throws Exception {
-        Parent root = FXMLLoader.load(GameController.class.getResource("/fxml/ChooseCharacter.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ChooseCharacter.fxml"));
         currentPrimaryStage.getScene().setRoot(root);
     }
-
-    public ObservableList<String> heroes = FXCollections.observableArrayList("Magician", "Warrior");
 
     /* private class ButtonHandler implements EventHandler<ActionEvent>{
         @Override

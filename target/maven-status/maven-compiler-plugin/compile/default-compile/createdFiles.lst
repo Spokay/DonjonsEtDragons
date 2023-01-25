@@ -4,6 +4,7 @@ org\donjonsetdragons\Models\character_package\enemy\Enemy.class
 org\donjonsetdragons\Models\board_package\case_package\EnemyCase.class
 org\donjonsetdragons\Models\character_package\hero\Hero.class
 org\donjonsetdragons\MainApp.class
+org\donjonsetdragons\Controllers\ChoiceController.class
 org\donjonsetdragons\utils\ApplicationUtils.class
 org\donjonsetdragons\Models\character_package\hero\Magician.class
 org\donjonsetdragons\Models\character_package\Character.class
@@ -11,6 +12,7 @@ org\donjonsetdragons\Models\board_package\case_package\EmptyCase.class
 org\donjonsetdragons\Controllers\MainController.class
 org\donjonsetdragons\Controllers\GameController.class
 org\donjonsetdragons\Controllers\HeroController.class
+org\donjonsetdragons\Models\character_package\hero\HeroData.class
 org\donjonsetdragons\Models\board_package\case_package\CaseContent.class
 org\donjonsetdragons\Models\character_package\enemy\Sorcerer.class
 org\donjonsetdragons\Models\character_package\enemy\Dragon.class
