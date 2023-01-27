@@ -1,5 +1,7 @@
 package org.donjonsetdragons.Models.character_package.enemy;
 
-public class Sorcerer extends Enemy{
+import org.donjonsetdragons.Models.character_package.Enemy;
+
+public class Sorcerer extends Enemy {
 
 }

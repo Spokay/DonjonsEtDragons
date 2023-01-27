@@ -1,0 +1,9 @@
+.topScreen{
+    -fx-background-color: red;
+}
+.boardPane{
+    -fx-background-color: yellow;
+}
+.boxGroup{
+    -fx-background-color: orange;
+}

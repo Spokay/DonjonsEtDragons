@@ -1,4 +1,4 @@
-package org.donjonsetdragons.Models.character_package.hero;
+package org.donjonsetdragons.Models.character_package;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;

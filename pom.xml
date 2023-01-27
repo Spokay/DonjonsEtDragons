@@ -51,7 +51,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>19</version>
         </dependency>
-
     </dependencies>
 
 

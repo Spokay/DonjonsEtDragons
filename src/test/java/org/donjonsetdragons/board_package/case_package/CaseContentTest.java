@@ -9,7 +9,7 @@ class CaseContentTest {
 
     @org.junit.jupiter.api.Test
     void generateRandomContent() {
-        Case caseClass = new Case();
+        Case caseClass = new Case(0);
         assertTrue(caseClass.caseContent instanceof CaseContent);
         System.out.println(caseClass.caseContent);
     }

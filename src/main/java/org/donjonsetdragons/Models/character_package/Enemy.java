@@ -1,4 +1,4 @@
-package org.donjonsetdragons.Models.character_package.enemy;
+package org.donjonsetdragons.Models.character_package;
 
 import org.donjonsetdragons.Models.character_package.Character;
 

@@ -1,17 +1,17 @@
-package org.donjonsetdragons.Controllers;
+package org.donjonsetdragons.Models.character_package;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.IntegerBinding;
 import javafx.beans.binding.StringBinding;
 import javafx.scene.control.Label;
-import org.donjonsetdragons.Models.character_package.hero.Hero;
+import org.donjonsetdragons.Controllers.Controller;
 import org.donjonsetdragons.utils.ApplicationUtils;
 
-public class HeroController extends Controller{
+public class HeroManager extends Controller {
 
     public Hero currentHero;
 
-    public HeroController(Label heroNameElement, Label heroHpElement, Label heroAtkElement, String[] heroInfo) throws Exception {
+    public HeroManager(Label heroNameElement, Label heroHpElement, Label heroAtkElement, String[] heroInfo) throws Exception {
         this.setCurrentHero(heroInfo);
         setObservableValues(heroNameElement, heroHpElement, heroAtkElement);
     }
