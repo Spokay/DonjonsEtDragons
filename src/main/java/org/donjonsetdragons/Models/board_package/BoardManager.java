@@ -1,5 +1,6 @@
 package org.donjonsetdragons.Models.board_package;
 
+import javafx.scene.layout.Pane;
 import org.donjonsetdragons.Models.board_package.case_package.Case;
 import org.donjonsetdragons.Models.game_package.Game;
 

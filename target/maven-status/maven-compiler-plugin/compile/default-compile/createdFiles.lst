@@ -16,6 +16,7 @@ org\donjonsetdragons\Models\board_package\case_package\CaseContent.class
 org\donjonsetdragons\Models\character_package\enemy\Sorcerer.class
 org\donjonsetdragons\Models\character_package\Hero.class
 org\donjonsetdragons\Models\character_package\enemy\Dragon.class
+org\donjonsetdragons\Controllers\BoardController.class
 org\donjonsetdragons\Models\board_package\case_package\SurpriseBoxCase.class
 org\donjonsetdragons\Models\board_package\case_package\Case.class
 org\donjonsetdragons\Models\board_package\BoardManager.class

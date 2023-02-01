@@ -3,13 +3,17 @@ package org.donjonsetdragons.Controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import java.net.URL;
-import java.util.ResourceBundle;
-
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import org.donjonsetdragons.Models.board_package.BoardManager;
 import org.donjonsetdragons.Models.character_package.HeroManager;
 import org.donjonsetdragons.Models.character_package.hero.HeroData;
 import org.donjonsetdragons.Models.game_package.GameManager;
+
+import java.net.URL;
+import java.util.Arrays;
+import java.util.ResourceBundle;
 
 public class GameController extends Controller implements Initializable {
 
@@ -19,12 +23,15 @@ public class GameController extends Controller implements Initializable {
     public Label heroHpPoints;
     @FXML
     public Label heroName;
+    @FXML
+    public AnchorPane boardContainer;
 
-    private static HeroManager heroManager;
+    public static HeroManager heroManager;
 
-    private static GameManager gameManager;
+    public static GameManager gameManager;
 
-    private static BoardManager boardManager;
+    public static BoardManager boardManager;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -33,7 +40,6 @@ public class GameController extends Controller implements Initializable {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @FXML
@@ -43,8 +49,15 @@ public class GameController extends Controller implements Initializable {
         boardManager = gameManager.getBoard();
     }
 
+    private void createBoard(){
+        Pane[] boardCases = BoardController.buildBoard();
+        boardContainer.getChildren().addAll(boardCases);
+        System.out.println(Arrays.toString(boardCases));
+    }
+
     @FXML
     public void rollDice(){
         int numberThrew = boardManager.rollDice();
+        this.createBoard();
     }
 }

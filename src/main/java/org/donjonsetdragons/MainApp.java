@@ -1,8 +1,6 @@
 package org.donjonsetdragons;
 
 import javafx.application.Application;
-import javafx.application.ConditionalFeature;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,17 +19,8 @@ public class MainApp extends Application {
         primaryStage.show();
     }
 
-    @Override
-    public void init() throws Exception {
-        super.init();
-    }
-
     public static void main(String[] args) {
         Application.launch(args);
     }
 
-    @Override
-    public void stop() throws Exception {
-        super.stop();
-    }
 }
