@@ -5,7 +5,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import org.donjonsetdragons.Models.board_package.BoardManager;
 import org.donjonsetdragons.Models.character_package.HeroManager;
 import org.donjonsetdragons.Models.character_package.hero.HeroData;
@@ -51,7 +50,9 @@ public class GameController extends Controller implements Initializable {
 
     private void createBoard(){
         Pane[] boardCases = BoardController.buildBoard();
-        boardContainer.getChildren().addAll(boardCases);
+        for (Pane boardCase: boardCases) {
+            boardContainer.getChildren().add(boardCase);
+        }
         System.out.println(Arrays.toString(boardCases));
     }
 

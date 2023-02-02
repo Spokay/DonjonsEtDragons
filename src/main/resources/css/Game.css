@@ -3,6 +3,7 @@
 }
 .boardPane{
     -fx-background-color: yellow;
+    -fx-content-display: center;
 }
 .boxGroup{
     -fx-background-color: orange;
