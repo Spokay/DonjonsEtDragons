@@ -10,5 +10,6 @@ public class Warrior extends Hero {
         this.setHp(10);
         this.setAttackPoint(warriorAttackPoint);
         this.setName(name);
+        this.setImagePath("images/warrior.png");
     }
 }

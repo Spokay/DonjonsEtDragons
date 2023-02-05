@@ -4,7 +4,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import org.donjonsetdragons.Models.board_package.BoardManager;
 import org.donjonsetdragons.Models.character_package.HeroManager;
 import org.donjonsetdragons.Models.character_package.hero.HeroData;
@@ -23,7 +25,7 @@ public class GameController extends Controller implements Initializable {
     @FXML
     public Label heroName;
     @FXML
-    public AnchorPane boardContainer;
+    public FlowPane boardContainer;
 
     public static HeroManager heroManager;
 
@@ -49,11 +51,11 @@ public class GameController extends Controller implements Initializable {
     }
 
     private void createBoard(){
-        Pane[] boardCases = BoardController.buildBoard();
-        for (Pane boardCase: boardCases) {
+        VBox[] boardCases = BoardController.buildBoard();
+        for (VBox boardCase: boardCases) {
             boardContainer.getChildren().add(boardCase);
         }
-        System.out.println(Arrays.toString(boardCases));
+        System.out.println("childs : " + boardContainer.getChildren());
     }
 
     @FXML

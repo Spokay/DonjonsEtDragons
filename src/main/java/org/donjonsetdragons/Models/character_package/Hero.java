@@ -2,12 +2,25 @@ package org.donjonsetdragons.Models.character_package;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-import org.donjonsetdragons.Models.character_package.Character;
 
 public class Hero extends Character {
     private SimpleIntegerProperty hp;
     private SimpleIntegerProperty[] attackPoint;
     private SimpleStringProperty name;
+    private SimpleStringProperty imagePath;
+
+    public String getImagePath() {
+        return imagePath.get();
+    }
+
+    public SimpleStringProperty imagePathProperty() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath.set(imagePath);
+    }
+
 
     public int getHp() {
         return hp.get();

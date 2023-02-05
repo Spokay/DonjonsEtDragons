@@ -1,9 +1,10 @@
 .topScreen{
-    -fx-background-color: red;
+    -fx-background-color: rgb(227, 242, 253);
 }
-.boardPane{
-    -fx-background-color: yellow;
+.boardContainer{
+    -fx-background-color: rgb(227, 242, 253);
     -fx-content-display: center;
+    -fx-padding: 10;
 }
 .boxGroup{
     -fx-background-color: orange;
