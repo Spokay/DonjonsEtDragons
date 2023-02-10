@@ -1,6 +1,5 @@
 package org.donjonsetdragons.Models.board_package;
 
-import javafx.scene.layout.Pane;
 import org.donjonsetdragons.Models.board_package.case_package.Case;
 import org.donjonsetdragons.Models.game_package.Game;
 
@@ -23,6 +22,7 @@ public class BoardManager {
 //        check if the new case number has enough cases left to go
         if (currentCaseNumber < this.getCurrentBoard().getTotalCases()){
 //            if he can then set a Case object to the new case with the right number
+
             this.getCurrentBoard().setCurrentCase(new Case(currentCaseNumber));
             this.getCurrentBoard().makeCaseInteraction(this.getCurrentBoard().getCurrentCase());
         }else{

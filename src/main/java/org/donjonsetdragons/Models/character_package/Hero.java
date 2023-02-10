@@ -18,7 +18,7 @@ public class Hero extends Character {
     }
 
     public void setImagePath(String imagePath) {
-        this.imagePath.set(imagePath);
+        this.imagePath = new SimpleStringProperty(imagePath);
     }
 
 

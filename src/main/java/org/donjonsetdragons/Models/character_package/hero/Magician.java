@@ -10,5 +10,6 @@ public class Magician extends Hero {
         this.setHp(6);
         this.setAttackPoint(magicianAttackPoint);
         this.setName(name);
+        this.setImagePath("images/magician.png");
     }
 }

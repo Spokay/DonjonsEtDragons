@@ -7,6 +7,10 @@ public class Board {
     private int currentCaseNumber = 0;
     private Case currentCase;
 
+    public Board(){
+        this.setCurrentCase(new Case(0));
+    }
+
     public int getTotalCases() {
         return totalCases;
     }
