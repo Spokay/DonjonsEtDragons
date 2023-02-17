@@ -18,8 +18,8 @@ public class Board {
         return currentCaseNumber;
     }
 
-    public void setCurrentCaseNumber() {
-        this.currentCaseNumber = this.getCurrentCase().getCaseNumber();
+    public void setCurrentCaseNumber(int caseNumber) {
+        this.currentCaseNumber = caseNumber;
     }
 
     public Case getCurrentCase() {

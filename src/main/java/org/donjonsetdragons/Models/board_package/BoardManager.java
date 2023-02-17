@@ -1,5 +1,7 @@
 package org.donjonsetdragons.Models.board_package;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import org.donjonsetdragons.Controllers.GameController;
 import org.donjonsetdragons.Models.board_package.case_package.Case;
 import org.donjonsetdragons.Models.game_package.Game;
 
@@ -17,8 +19,11 @@ public class BoardManager {
     public int rollDice(){
 //        get a random number between 1 and 6
         int randomNum = ThreadLocalRandom.current().nextInt(1, 6 + 1);
+        System.out.println("randomNumber : " + randomNum);
 //        calculate the new board case number
         int currentCaseNumber = this.getCurrentBoard().getRemainingCases() + randomNum;
+        this.getCurrentBoard().setCurrentCaseNumber(currentCaseNumber);
+        GameController.currentCaseNumber = new SimpleIntegerProperty(currentCaseNumber);
 //        check if the new case number has enough cases left to go
         if (currentCaseNumber < this.getCurrentBoard().getTotalCases()){
 //            if he can then set a Case object to the new case with the right number
