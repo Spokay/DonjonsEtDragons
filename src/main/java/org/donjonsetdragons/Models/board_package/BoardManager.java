@@ -23,16 +23,22 @@ public class BoardManager {
 //        calculate the new board case number
         int currentCaseNumber = this.getCurrentBoard().getRemainingCases() + randomNum;
         this.getCurrentBoard().setCurrentCaseNumber(currentCaseNumber);
-        GameController.currentCaseNumber = new SimpleIntegerProperty(currentCaseNumber);
 //        check if the new case number has enough cases left to go
         if (currentCaseNumber < this.getCurrentBoard().getTotalCases()){
 //            if he can then set a Case object to the new case with the right number
-
+            GameController.currentCaseNumber = new SimpleIntegerProperty(currentCaseNumber);
             this.getCurrentBoard().setCurrentCase(new Case(currentCaseNumber));
+
+
             this.getCurrentBoard().makeCaseInteraction(this.getCurrentBoard().getCurrentCase());
+            if (this.getCurrentGame().isLost()){
+                GameController.gameLost();
+            }
+
         }else{
 //            if he passed the end line then set the Game property to isWon
             this.getCurrentGame().setWon(true);
+            GameController.gameWon();
         }
 
         return randomNum;

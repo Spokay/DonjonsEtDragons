@@ -6,10 +6,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import org.donjonsetdragons.Models.board_package.BoardManager;
 import org.donjonsetdragons.Models.character_package.HeroManager;
@@ -70,15 +68,33 @@ public class GameController extends Controller implements Initializable {
     }
     @FXML
     public void rollDice(){
+        // remove previous styles for the currentCase
+        VBox previousCase = (VBox) boardContainer.getChildren().get(currentCaseNumber.get());
+        previousCase.getStyleClass().remove("currentCase");
+        previousCase.setBackground(new Background(new BackgroundFill(Color.rgb(144, 169, 85), null, null)));
+        // roll the dice
         int numberThrew = boardManager.rollDice();
-        VBox newCase = (VBox) boardContainer.getChildren().get(currentCaseNumber.get());
-        // TODO: 17/02/2023 add and remove styleClasses to change the behavior of the case  
-//        newCase.getStyleClass().add();
-        // TODO: 17/02/2023 check if the currentCasenumber is above the boardContainer.getChildren() length 
 
-        newCase.setBackground(new Background(new BackgroundFill(Color.TURQUOISE, null, null)));
+        // apply styles to the new currentCase
+        VBox newCase = (VBox) boardContainer.getChildren().get(currentCaseNumber.get());
+        newCase.getStyleClass().add("currentCase");
+        BackgroundImage bgImageHero = new BackgroundImage(new Image(heroManager.getCurrentHero().getImagePath(),50,50,false,true),
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT);
+        newCase.getChildren().get(0);
+        newCase.setBackground(new Background(bgImageHero));
+
         System.out.println("newCase : " + boardContainer.getChildren().get(currentCaseNumber.get()));
         System.out.println("caseProperty : " + boardManager.getCurrentBoard().getCurrentCase().getCaseNumber());
         System.out.println("currentCaseNumber : " + currentCaseNumber.get());
+    }
+
+
+    public static void gameWon(){
+
+    }
+
+    public static void gameLost(){
+
     }
 }

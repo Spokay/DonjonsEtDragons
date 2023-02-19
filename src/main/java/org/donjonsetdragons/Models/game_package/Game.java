@@ -1,8 +1,8 @@
 package org.donjonsetdragons.Models.game_package;
 
 public class Game {
-    public boolean isLost;
-    public boolean isWon;
+    public boolean isLost = false;
+    public boolean isWon = false;
     public boolean isLost() {
         return isLost;
     }

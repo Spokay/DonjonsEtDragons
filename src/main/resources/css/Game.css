@@ -6,6 +6,7 @@
     -fx-content-display: center;
     -fx-padding: 10;
 }
-.boxGroup{
-    -fx-background-color: orange;
+
+.currentCase > *{
+    -fx-opacity: 0;
 }

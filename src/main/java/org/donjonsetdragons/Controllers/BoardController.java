@@ -15,8 +15,8 @@ public class BoardController extends Controller{
             currentCase.setAlignment(Pos.CENTER);
             currentCase.setPadding(new Insets(10));
             currentCase.setBackground(new Background(new BackgroundFill(Color.rgb(144, 169, 85), null, null)));
-            currentCase.setMinWidth(50);
-            currentCase.setMinHeight(50);
+            currentCase.setMinWidth(60);
+            currentCase.setMinHeight(60);
             currentCase.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, null, new BorderWidths(2))));
 //            ImageView characterImage = new ImageView();
             currentCase.getChildren().add(new Text(String.valueOf(i)));
